@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Claude Code einrichten · TOP effektiv</title>
-<meta name="description" content="Schritt für Schritt zu Claude Code: Konto, Abo, App, Google Drive. Einfach von oben nach unten durchklicken.">
+<meta name="description" content="Schritt für Schritt zu Claude Code: Konto, Abo, App, Google Drive, Master Brain. Einfach von oben nach unten durchklicken.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -114,7 +114,9 @@
   code { font-family: Consolas, "SF Mono", monospace; background: var(--grund); border: 1px solid var(--linie); padding: 2px 7px; border-radius: 6px; font-size: 15px; }
   .nur-mac, .nur-win { display: none; }
   body.mac .nur-mac, body.win .nur-win { display: inline; }
-  body.mac p.nur-mac, body.win p.nur-win { display: block; }
+  body.mac p.nur-mac, body.win p.nur-win, body.mac details.nur-mac, body.win details.nur-win { display: block; }
+  .liste { margin: 0 0 12px; padding-left: 20px; }
+  .liste li { margin: 0 0 4px; }
 
   /* Fuß */
   .fuss { margin-top: 48px; padding: 26px; background: var(--karte); border: 1px solid var(--linie); border-radius: 16px; text-align: center; }
@@ -147,7 +149,7 @@
   </section>
 
   <div class="leiste">
-    <span class="leise">Dauert etwa 15 Minuten.</span>
+    <span class="leise">Einrichten etwa 20 Minuten, dazu das Einrichtungs-Gespräch.</span>
     <div class="fortschritt">
       <div class="balken"><span id="balken"></span></div>
       <span id="zaehler">0 von 5 geschafft</span>
@@ -247,7 +249,38 @@
     </div>
   </article>
 
-  <p class="fertig-text leise" id="fertig">Geschafft! Claude Code läuft. Jetzt kannst du einfach loslegen und Claude in normalen Worten sagen, was du brauchst.</p>
+  <article class="schritt" data-schritt="konnektoren">
+    <div class="nr">6</div>
+    <div>
+      <h3>Deine Programme anbinden</h3>
+      <p>Damit Claude nicht nur reden, sondern auch für dich arbeiten kann, gibst du ihm den Schlüssel zu deinen Programmen. Klick in der Claude-App links unten auf deinen Namen, dann auf <strong>Einstellungen</strong>, und scroll links zu <strong>Konnektoren</strong>.</p>
+      <p>Für den Anfang reichen diese, je nachdem, womit du arbeitest:</p>
+      <ul class="liste">
+        <li><strong>Google Drive, Gmail, Google Kalender</strong>, wenn du mit Google arbeitest</li>
+        <li><strong>Microsoft 365</strong> (Outlook, OneDrive, Kalender), wenn du mit Microsoft arbeitest</li>
+      </ul>
+      <p>Bei jedem klickst du auf <strong>Verbinden</strong>, wählst dein Konto und erlaubst den Zugriff (oben den Haken bei „Alle auswählen“ setzen). Weitere Programme kannst du später jederzeit dazunehmen.</p>
+      <div class="aktionen">
+        <label class="haken"><input type="checkbox"> Geschafft</label>
+      </div>
+    </div>
+  </article>
+
+  <article class="schritt" data-schritt="gespraech">
+    <div class="nr">7</div>
+    <div>
+      <h3>Das Einrichtungs-Gespräch starten</h3>
+      <p>Jetzt lernt Claude dich kennen. Dafür gibt es eine Einrichtungs-Datei: Sie bringt Claude dazu, dir Fragen zu stellen, und alles, was du erzählst, landet in deinem Master Brain. Du füllst nichts aus, du redest einfach.</p>
+      <p>Die Datei bekommst du von Norbert. Leg sie in deinen Download-Ordner und sag Claude im Bereich <strong>Code</strong> einfach:</p>
+      <div class="hinweis">„Schau in meinen Download-Ordner. Dort liegt die Einrichtungs-Datei. Hol sie dir und mach, was drinsteht.“</div>
+      <p class="leise">Nimm dir dafür in Ruhe eineinhalb bis zwei Stunden. Je mehr du erzählst, desto besser kennt dich Claude ab morgen. Du musst es ihm nie wieder erklären.</p>
+      <div class="aktionen">
+        <label class="haken"><input type="checkbox"> Geschafft</label>
+      </div>
+    </div>
+  </article>
+
+  <p class="fertig-text leise" id="fertig">Geschafft! Claude Code läuft und kennt dich. Ab jetzt sagst du Claude in normalen Worten, was du brauchst.</p>
 
   <h2 id="hilfe">Hilfe, es hakt</h2>
   <p class="h2-unter">Die häufigsten Stolpersteine und was du dann machst.</p>
@@ -270,9 +303,38 @@
   </details>
 
   <details>
-    <summary>Der Virenschutz schlägt Alarm</summary>
+    <summary>Die Seite bietet keinen Download an oder sagt, Claude ist schon da</summary>
+    <div class="inhalt">
+      <p>Dann hast du die Datei vermutlich schon einmal geladen. Öffne deinen Download-Ordner<span class="nur-win"> (Windows-Taste + E, links „Downloads“)</span>, such die Claude-Setup-Datei und mach einen Doppelklick darauf.</p>
+    </div>
+  </details>
+
+  <details class="nur-win">
+    <summary>Die Installation bricht ab oder will Administrator-Rechte</summary>
+    <div class="inhalt">
+      <p>Klick mit der <strong>rechten</strong> Maustaste auf die Claude-Setup-Datei im Download-Ordner und wähl <strong>„Als Administrator ausführen“</strong>. Die Frage danach bestätigst du mit „Ja“.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Der Virenschutz schlägt Alarm oder blockiert</summary>
     <div class="inhalt">
       <p>Das ist ein Fehlalarm. Klick auf „Zulassen“. Ist es ein Firmenrechner, muss das eventuell deine IT freigeben.</p>
+      <p>Zusätzliche Programme wie Avast oder Norton blockieren manchmal auch dann noch, wenn Claude etwas für dich einrichten will. Dann such im Programm die Einstellung für Ausnahmen und lass Claude zu. Oder frag Claude selbst: Mach einen Screenshot von der Meldung und gib ihn Claude, es sagt dir genau, wo du klicken musst.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Claude findet meinen Brain-Ordner nicht</summary>
+    <div class="inhalt">
+      <p>Dann liegt dein Cloud-Speicher nur im Internet und noch nicht auf deinem Rechner. Geh zurück zu <strong>Schritt 4</strong> und installiere Google Drive oder OneDrive auf dem Rechner. Das erste Abgleichen kann ein paar Stunden dauern, das läuft im Hintergrund.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Irgendetwas anderes klemmt</summary>
+    <div class="inhalt">
+      <p>Mach einen Screenshot von dem, was du gerade siehst, gib ihn Claude und frag: „Was muss ich hier tun?“ Und wenn Claude sagt, du sollst etwas machen, antworte einfach: <strong>„Mach du das bitte für mich.“</strong></p>
     </div>
   </details>
 
